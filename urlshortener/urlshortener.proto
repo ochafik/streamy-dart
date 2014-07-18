@@ -1,0 +1,51 @@
+// Copyright 2007 Google Inc.  All rights reserved.
+// Author: kenton@google.com (Kenton Varda)
+//  Based on original Protocol Buffers design by
+//  Sanjay Ghemawat, Jeff Dean, and others.
+//
+// The messages in this file describe the definitions found in .proto files.
+// A valid .proto file can be translated directly to a FileDescriptorProto
+// without any other information (e.g. without reading its imports).
+
+syntax = "proto2";
+
+package urlshortener_proto;
+
+message Url {
+  optional string id = 1;
+  optional string longUrl = 2;
+  optional string status = 3;
+}
+
+message GetRequest {
+  optional string shortUrl = 1;
+}
+
+message UrlHistory {
+  repeated Url items = 1;
+  optional int32 itemsPerPage = 2;
+  optional string kind = 3;
+  optional string nextPageToken = 4;
+  optional int32 totalItems = 5;
+}
+
+message ListRequest {
+  optional string projection = 1;
+  optional string start_token = 2;
+}
+
+message ListResponse {
+  repeated Url url = 1;
+}
+
+// TODO(ochafik): Scratch this.
+message Void {}
+
+service UrlShortenerService {
+  // TODO(ochafik): can we pass (string) directly?
+  rpc Get (GetRequest) returns (Url);
+
+  rpc Insert (Url) returns (Url);
+
+  rpc List (ListRequest) returns (UrlHistory);
+}
