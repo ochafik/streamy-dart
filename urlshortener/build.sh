@@ -4,7 +4,7 @@ set -e
 
 cd $(dirname $0)
 PROJECT_ROOT=$PWD
-PROTOC_PLUGIN_ROOT=$PWD/../../dart-protoc-plugin
+PROTOC_PLUGIN_ROOT=$PWD/../dart-protoc-plugin
 STREAMY_ROOT=$PWD/..
 
 PROTO_OUT=$PROJECT_ROOT/lib/proto

@@ -1,12 +1,6 @@
 # Experiments on streamy+protobuf
 
-Get started with:
-
-```
-git clone git@github.com:ochafik/streamy-dart.git ochafik-streamy-dart
-git submodule init
-git submodule update
-```
+Please read instructions in the `urlshortener` directory.
 
 # Streamy for Dart (experimental)
 

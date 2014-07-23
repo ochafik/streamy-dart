@@ -8,13 +8,11 @@ Random notes:
 To hack streamy-dart + the protoc compiler, run the following:
 
   ```
-  mkdir tmp
-  cd tmp
+  git clone -b proto-mixin-experiments git@github.com:ochafik/streamy-dart.git ochafik-streamy-dart
+  git submodule init
+  git submodule update
   
-  git clone -b service-generator git@github.com:ochafik/dart-protoc-plugin.git
-  git clone -b proto-wrapping-experiments git@github.com:ochafik/streamy-dart.git
-  
-  cd streamy-dart/urlshortener
+  cd ochafik-streamy-dart/urlshortener
   
   ./build.sh
   ```
