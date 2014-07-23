@@ -1,11 +1,10 @@
 ///
 //  Generated code. Do not modify.
 ///
-library urlshortener_mixin.pb;
+library urlshortener_proto;
 
 import 'package:fixnum/fixnum.dart';
 import 'package:protobuf/protobuf.dart';
-
 
 class Url extends GeneratedMessage with UrlMixin {
   Url() : super();
@@ -20,6 +19,7 @@ abstract class UrlMixin {
     ..a(3, 'status', GeneratedMessage.OS)
     ..hasRequiredFields = false
   ;
+
   BuilderInfo get info_ => _i;
 
   String get id => getField(1);
@@ -49,6 +49,7 @@ abstract class GetRequestMixin {
     ..a(1, 'shortUrl', GeneratedMessage.OS)
     ..hasRequiredFields = false
   ;
+
   BuilderInfo get info_ => _i;
 
   String get shortUrl => getField(1);
@@ -72,6 +73,7 @@ abstract class UrlHistoryMixin {
     ..a(5, 'totalItems', GeneratedMessage.O3)
     ..hasRequiredFields = false
   ;
+
   BuilderInfo get info_ => _i;
 
   List<Url> get items => getField(1);
@@ -109,6 +111,7 @@ abstract class ListRequestMixin {
     ..a(2, 'startToken', GeneratedMessage.OS)
     ..hasRequiredFields = false
   ;
+
   BuilderInfo get info_ => _i;
 
   String get projection => getField(1);
@@ -133,7 +136,23 @@ abstract class ListResponseMixin {
     ..m(1, 'url', () => new Url(), () => new PbList<Url>())
     ..hasRequiredFields = false
   ;
+
   BuilderInfo get info_ => _i;
 
   List<Url> get url => getField(1);
 }
+
+class Void extends GeneratedMessage with VoidMixin {
+  Void() : super();
+  Void.fromBuffer(List<int> i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromBuffer(i, r);
+  Void.fromJson(String i, [ExtensionRegistry r = ExtensionRegistry.EMPTY]) : super.fromJson(i, r);
+  Void clone() => new Void()..mergeFromMessage(this);
+}
+abstract class VoidMixin {
+  static final BuilderInfo _i = new BuilderInfo('Void')
+    ..hasRequiredFields = false
+  ;
+
+  BuilderInfo get info_ => _i;
+}
+

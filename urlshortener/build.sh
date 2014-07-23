@@ -7,7 +7,7 @@ PROJECT_ROOT=$PWD
 PROTOC_PLUGIN_ROOT=$PWD/../dart-protoc-plugin
 STREAMY_ROOT=$PWD/..
 
-PROTO_OUT=$PROJECT_ROOT/lib/mixin_autogen
+PROTO_OUT=$PROJECT_ROOT/lib/mixin
 DISCOVERY_OUT=$PROJECT_ROOT/lib/discovery
 
 mkdir -p $PROTO_OUT $DISCOVERY_OUT
