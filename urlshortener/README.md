@@ -1,4 +1,4 @@
-Experiments on adding protobuf support to streamy.
+# Experiments on streamy+protobuf
 
 Since streamy.Entity and protobuf.GeneratedMessage can't be mixed in together, there's two hacks in one in here:
 * `lib/wrapped`: Wrapping the original proto messages in [ObservableGeneratedMessage](https://github.com/ochafik/streamy-dart/blob/proto-mixin-experiments/lib/runtime/proto/observable_generated_message.dart) entity, and [wiring the setters and getters](https://github.com/ochafik/streamy-dart/blob/proto-mixin-experiments/urlshortener/lib/wrapped/urlshortener_objects.dart) (this requires lots of boilerplate)
@@ -15,3 +15,8 @@ To hack streamy-dart + the protoc compiler, run the following:
   cd urlshortener
   ./build.sh
   ```
+
+TODO
+* Do an end-to-end test with a simplistic Java(?) server
+* Take [service_generator.dart](https://github.com/ochafik/dart-protoc-plugin/blob/b1fd5bc6eaefc290abc2d0b339c6db9af7b35661/lib/service_generator.dart) out of the dart-protoc-plugin fork and move it to streamy.generator / have it generate code like [urlshortener/lib/mixin](https://github.com/ochafik/streamy-dart/blob/proto-mixin-experiments/urlshortener/lib/mixin)
+* Liaise with dart-protobuf guys to see if they're likely to take [our diff](https://github.com/ochafik/dart-protobuf/compare/observable-mixins?expand=1) in
