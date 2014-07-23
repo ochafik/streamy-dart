@@ -8,6 +8,7 @@ import 'package:observe/observe.dart';
 import 'package:streamy/streamy.dart';
 
 part 'observable_generated_message.dart';
+part 'generated_message_entity.dart';
 part 'proto_request.dart';
 part 'proto_root.dart';
 

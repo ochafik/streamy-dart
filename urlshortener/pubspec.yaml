@@ -14,8 +14,8 @@ dependencies:
   fixnum: ">=0.9.0"
   json: ">=0.9.0"
   observe: ">=0.9.1"
-  protobuf: any
+  protobuf:
+    path: ../../dart-protobuf
   streamy:
     path: ..
-    # ">=0.0.7"
   quiver: ">=0.14.0"
