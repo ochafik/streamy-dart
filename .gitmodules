@@ -1,0 +1,6 @@
+[submodule "dart-protoc-plugin"]
+	path = dart-protoc-plugin
+	url = git@github.com:ochafik/dart-protoc-plugin.git
+[submodule "dart-protobuf"]
+	path = dart-protobuf
+	url = git@github.com:ochafik/dart-protobuf.git

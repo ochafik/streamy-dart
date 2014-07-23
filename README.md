@@ -1,3 +1,13 @@
+# Experiments on streamy+protobuf
+
+Get started with:
+
+```
+git clone git@github.com:ochafik/streamy-dart.git ochafik-streamy-dart
+git submodule init
+git submodule update
+```
+
 # Streamy for Dart (experimental)
 
 [![Build Status](https://drone.io/github.com/google/streamy-dart/status.png)](https://drone.io/github.com/google/streamy-dart/latest)
@@ -51,6 +61,7 @@ Find one for the API you want to access. Let's use Google URL shortener as examp
 
 ### Generate client library
 
+    > pub get
     > dart bin/apigen.dart \
         --discovery-file=urlshortener.json \
         --client-file-name=urlshortener \
